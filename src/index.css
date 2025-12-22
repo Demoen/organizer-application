@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #000000;
+    --color-surface: #050505;
+    --color-surface-glass: rgba(0, 0, 0, 0.8);
+    --color-primary: #ffffff;
+    /* White accent for premium monochrome */
+    --color-primary-glow: rgba(255, 255, 255, 0.3);
+    --color-secondary: #52525b;
+    /* Zinc 600 */
+    --color-accent: #e4e4e7;
+    /* Zinc 200 */
+    --color-danger: #ef4444;
+    --color-success: #10b981;
+
+    --animate-fade-in: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --animate-slide-up: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --animate-pulse-glow: pulseGlow 4s infinite;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulseGlow {
+
+        0%,
+        100% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+        }
+
+        50% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    @apply text-zinc-300 antialiased overflow-x-hidden;
+    min-height: 100vh;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@utility glass {
+    @apply bg-surface/40 backdrop-blur-xl border border-white/5 shadow-2xl;
+}
+
+@utility glass-card {
+    @apply glass rounded-xl transition-all duration-300 hover:border-white/10 hover:bg-surface/60;
+}
+
+@utility neon-text {
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}

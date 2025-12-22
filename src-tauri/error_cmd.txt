@@ -1,0 +1,14 @@
+    Checking tauri v2.9.5
+    Checking tauri-plugin-log v2.7.1
+   Compiling app v0.1.0 (C:\Users\Yannick\Desktop\programming\organizer application\src-tauri)
+error: failed to run custom build command for `app v0.1.0 (C:\Users\Yannick\Desktop\programming\organizer application\src-tauri)`
+
+Caused by:
+  process didn't exit successfully: `C:\Users\Yannick\Desktop\programming\organizer application\src-tauri\target\debug\build\app-86fd2fba1800ebf5\build-script-build` (exit code: 1)
+  --- stdout
+  cargo:rerun-if-env-changed=TAURI_CONFIG
+  cargo:rustc-check-cfg=cfg(desktop)
+  cargo:rustc-cfg=desktop
+  cargo:rustc-check-cfg=cfg(mobile)
+  cargo:rerun-if-changed=C:\Users\Yannick\Desktop\programming\organizer application\src-tauri\tauri.conf.json
+  invalid port number: "http://localhost:3000http://localhost:5173"
