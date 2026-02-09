@@ -35,3 +35,7 @@
 *.rar  binary
 *.exe  binary
 *.dll  binary
+
+# GitHub Linguist: exclude frontend assets from language stats
+/src/**    linguist-vendored
+/public/** linguist-vendored
